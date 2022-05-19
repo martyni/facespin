@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # -*- coding: UTF-8 -*-
 #import chardet
 import os
@@ -30,9 +30,16 @@ try:
     # Create blank image for drawing.
     logging.info("show image")
     image = Image.open('../pic/alexanderjnewall.jpg')	
-    im_r=image.rotate(180)
-    disp.ShowImage(im_r)
-    time.sleep(3)
+    amount = 90
+    spun = 0
+    while True:
+       im_r=image.rotate(amount)
+       disp.ShowImage(im_r)
+       amount += 1
+       if amount == 360:
+          amount = 0
+          spun += 1
+          logging.info("Spun {} times".format(spun))
     disp.module_exit()
     logging.info("quit:")
 except IOError as e:
