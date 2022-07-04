@@ -18,7 +18,7 @@ BL = 18
 bus = 0 
 device = 0 
 logging.basicConfig(level=logging.DEBUG)
-
+Picture = '../../Pictures/alexanderjnewall.png'
 
 def average(lst):
    return sum(lst) / len(lst)
@@ -70,7 +70,7 @@ try:
 
     # Create blank image for drawing.
     logging.info("show image")
-    image = Image.open('../pic/alexanderjnewall.png')	
+    image = Image.open(Picture)
     amount = 90
     spun = 0
     speed = 1
@@ -91,7 +91,7 @@ try:
               previous_speeds.pop(0)
           speed = 1 if not speed else speed
           flag = choice(['spread', 'rotate', 'noise', 'resize'])
-          image = Image.open('../pic/alexanderjnewall.png')	
+          image = Image.open(Picture)	
     disp.module_exit()
     logging.info("quit:")
 except IOError as e:
