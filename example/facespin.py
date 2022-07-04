@@ -17,7 +17,7 @@ DC = 25
 BL = 18
 bus = 0 
 device = 0 
-logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(level=logging.CRITICAL)
 Picture = '../../Pictures/alexanderjnewall.png'
 
 def average(lst):
@@ -95,7 +95,7 @@ try:
     disp.module_exit()
     logging.info("quit:")
 except IOError as e:
-    logging.info(e)    
+    logging.critical(e)    
 except KeyboardInterrupt:
     disp.module_exit()
     logging.info("quit:")
