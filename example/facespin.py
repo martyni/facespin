@@ -18,7 +18,7 @@ BL = 18
 bus = 0 
 device = 0 
 logging.basicConfig(level=logging.CRITICAL)
-Picture = '../../Pictures/alexanderjnewall.png'
+Picture = '/home/martyni/LCD_1inch28_21.jpg'
 
 def average(lst):
    return sum(lst) / len(lst)
